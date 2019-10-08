@@ -1,0 +1,326 @@
+body {
+  background: #DFE6F0
+}
+
+#logo {
+  color:white;
+  display: block;
+  padding: 0 25px;
+  float: left;
+  font-size:35px;
+  line-height: 60px;
+  width: 270px;
+  text-align: center;
+  background:#3650C2;
+}
+
+nav {
+  margin:0;
+  padding: 0;
+  background-color:#E9E9E9;
+  color: black;
+}
+
+nav::after{
+  content: "";
+  display: table;
+  clear: both;
+}
+
+nav ul {
+  /* float: right; */
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  position: relative;
+}
+
+nav ul li {
+  margin: 0;
+  display: block;
+  float: left;
+  background-color: #E9E9E9;
+}
+
+nav a {
+  display: block;
+  padding: 14px .8vw;
+  color: black;
+  font-size: 0.9vw;
+  text-decoration: none;
+  height: 60px;
+  transition: 0.5s;
+}
+
+nav ul li ul li:hover {
+  background: black;
+}
+
+nav a:hover {
+  color: white;
+  background: #3650C2;
+}
+
+nav ul ul {
+  display: none;
+  position: absolute;
+  top: 60px /*hs to be the same as the "line-height" of nav a */
+}
+
+nav ul li:hover > ul {
+  display: inherit;
+}
+
+nav ul ul li {
+  width: 170px;
+  float: none;
+  display: list-item;
+  position:relative; 
+}
+
+.toggle, [id^=drop] {
+display: none;
+}
+
+@media all and (max-width: 1000px) {
+  
+  #logo {
+      display:block;
+      padding: 0;
+      width: 100%;
+      text-align: center;
+      float: none;
+  }
+
+  nav {
+      margin: 0;
+  }
+
+  nav a {
+      font-size: 2vw;
+  }
+
+  /*hide the navigation menu by default*/
+  .toggle +a, .menu {
+      display: none;
+  }
+
+  .toggle {
+      display: block;
+      background-color: #E9E9E9;
+      padding: 14px 20px;
+      color: black;
+      font-size: 17px;
+      text-decoration: none;
+      border: none;
+      transition: 1.5s;
+  }
+
+
+  .toggle:hover {
+      background-color: #3650C2;
+      color: white;
+  }
+
+  /* Display Dropdown when clicked on Parent Lable */
+[id^=drop]:checked + ul {
+  display: block;
+  }
+
+  /* Change menu item's width to 100% */
+nav ul li {
+  display: block;
+  width: 100%;
+  }
+
+nav ul ul .toggle,
+nav ul ul a {
+  padding: 0 40px;
+}
+
+nav ul ul ul a {
+  padding: 0 80px;
+  }
+  
+  nav a:hover,
+  nav ul ul ul a {
+     background-color: #3650C2;
+  }
+
+  nav ul li ul li .toggle,
+  nav ul ul a,
+  nav ul ul ul a {
+     padding:14px 20px;
+     color:#FFF;
+     font-size:17px;
+  }
+
+
+  nav ul li ul li .toggle,
+  nav ul ul a {
+    background-color: #212121;
+  }
+
+ /* Hide Dropdowns by Default */
+  nav ul ul {
+     float: none;
+     position:static;
+     color: #ffffff;
+     /* has to be the same number as the "line-height" of "nav a" */
+  }
+
+ /* Hide menus on hover */
+  nav ul ul li:hover > ul,
+  nav ul li:hover > ul {
+     display: none;
+  }
+
+  /* Fisrt Tier Dropdown */
+  nav ul ul li {
+     display: block;
+     width: 100%;
+  }
+
+  nav ul ul ul li {
+     position: static;
+ }
+}
+
+@media all and (max-width: 330px) {
+
+  nav ul li {
+      display: block;
+      width: 94%;
+  }
+
+  nav a {
+      font-size: 10vw;
+  }
+}
+
+.photo {
+  height: auto;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+  
+.items {
+  height: auto;
+  width: 100%;
+  margin: auto;
+  padding: 20px 60px 20px 60px;
+}
+
+.items a {
+  font-size: 30px;
+}
+
+.item {
+  background: white;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  position: relative;
+  max-width: 300px;
+  margin: auto;
+}
+
+.col-lg-3 {
+  border-bottom: 15px solid rgba(123, 123, 123, 0);
+}
+
+.item p {
+  text-align: center;
+}
+
+.item h2 {
+  color: #244AD0;
+  text-align: center;
+}
+  
+.add {
+  position: absolute;
+  bottom: -5px;
+  right: -5px;
+  font-size: 27px;
+  border: 1px solid black;
+  width: 45px;
+  text-align: center;
+  background: white;
+  transition: 0.5s;
+  color: #3B50B9;
+  font-weight: 800;
+  padding: 0;
+}
+
+.add:hover {
+  background-color: rgb(220, 220, 220);
+}
+
+.item_img {
+  margin: auto;
+  height: 110px;
+  width: 180px;
+  background-image:url('../img/item.jpg');
+  background-size: 100%;
+  }
+
+footer {
+  position: relative;
+  bottom: 0;
+}
+
+.about-us {
+  padding: 20px 10%;
+}
+
+#text {
+  column-count: 2;
+  column-gap: 45px;
+  column-width: 250px;
+  text-align: justify;
+}
+
+.contact {
+  padding: 20px 10%;
+}
+
+.login {
+  height: auto;
+  width: 300px;
+  margin: auto;
+}
+
+.form-1 {
+  width: 280px;
+  margin: auto;
+  margin-top: 60px;
+  padding: 10px;
+  position: relative;
+  box-shadow:
+      0 0 1px rgba(0, 0, 0, 0.3),
+      0 3px 7px rgba(0, 0, 0, 0.3),
+      inset 0 1px rgba(255,255,255,1),
+      inset 0 -3px 2px rgba(0,0,0,0.25);
+  border-radius: 5px;
+  background: linear-gradient(#eeefef, #ffffff 10%);
+}
+
+.form-1 .field i {
+  left: 0px;
+  top: 0px;
+  position: absolute;
+  height: 36px;
+  width: 36px;
+  color: #777777;
+  text-align: center;
+  line-height: 42px;
+  transition: all 0.3s ease-out;
+  pointer-events: none;
+}
+
+.shop {
+  height: auto;
+  width: 100%;
+  padding: 30px 10%;
+  border: 0px solid rgb(240, 240, 240);
+}
